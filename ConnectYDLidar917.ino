@@ -1,6 +1,6 @@
 /*
  *  YDLIDAR SYSTEM
- *  YDLIDAR Arduino 
+ *  YDLIDAR Arduino. 
  *
  *  Copyright 2015 - 2018 EAI TEAM
  *  http://www.eaibot.com
