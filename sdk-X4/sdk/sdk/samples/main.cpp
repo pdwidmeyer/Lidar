@@ -31,7 +31,7 @@
 *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 *  POSSIBILITY OF SUCH DAMAGE.
 *********************************************************************/
-#include "CYdLidar.h"
+#include "../include/CYdLidar.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -133,11 +133,11 @@ int main(int argc, char *argv[]) {
   std::string input_tof;
   printf("Whether the Lidar is one-way communication[yes/no]:");
   std::cin >> input_channel;
-  std::transform(input_channel.begin(), input_channel.end(),
-                 input_channel.begin(),
-  [](unsigned char c) {
-    return std::tolower(c);  // correct
-  });
+//  std::transform(input_channel.begin(), input_channel.end(),
+//                 input_channel.begin(),
+//    [](unsigned char c) {
+//    return std::tolower(c);  // correct
+//  });
 
   if (input_channel.find("yes") != std::string::npos) {
     isSingleChannel = true;
@@ -149,11 +149,10 @@ int main(int argc, char *argv[]) {
 
   printf("Whether the Lidar is a TOF Lidar [yes/no]:");
   std::cin >> input_tof;
-  std::transform(input_tof.begin(), input_tof.end(),
-                 input_tof.begin(),
-  [](unsigned char c) {
-    return std::tolower(c);  // correct
-  });
+//  std::transform(input_tof.begin(), input_tof.end(),
+//                 input_tof.begin(),
+//    [](unsigned char c) -> unsigned char { return std::tolower(c);  // correct
+ // });
 
   if (input_tof.find("yes") != std::string::npos) {
     isTOFLidar = true;

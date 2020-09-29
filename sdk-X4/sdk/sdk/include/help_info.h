@@ -33,7 +33,7 @@
 *********************************************************************/
 #pragma once
 
-#include <ydlidar_protocol.h>
+#include "ydlidar_protocol.h"
 #include <map>
 
 namespace ydlidar {

@@ -14,6 +14,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
+#include <time.h>
 #endif
 
 
@@ -209,7 +210,7 @@ class Event {
       fflush(stderr);
     }
 
-    ret = pthread_condattr_setclock(&_cond_cattr, CLOCK_MONOTONIC);
+    ret = pthread_condattr_setpshared(&_cond_cattr, CLOCK_MONOTONIC);
     pthread_mutex_init(&_cond_locker, NULL);
     ret =  pthread_cond_init(&_cond_var, &_cond_cattr);
 #endif
